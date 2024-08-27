@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Dom</title>
+    <style>
+        div#area{
+            font: normal 20pt arial;
+            background: greenyellow;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        button#reset{
+            color:red;
+            width: 80px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja
+    </div>
+    <button id="reset" onclick="resetar()">RESETAR</button>
+    <script>
+        var a = window.document.getElementById('area')
+        function clicar() {
+            a.innerText='Você clicou'
+            a.style.background = 'blue';
+        }
+        function resetar() {
+            window.document.querySelector('div#area').innerText ='Interaja'
+            a.style.background = 'limegreen';
+        }
+        function entrar(){
+            a.innerText='Entrou'
+        }
+        function sair(){
+            a.innerText='Saiu'
+        }
+    </script>
+</body>
+</html>
